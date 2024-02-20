@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sqlserver:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    container_name: sqlgql
+    restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Pwd12345!"
+      MSSQL_PID: "Express"
+    ports:
+      - "11435:1433"
